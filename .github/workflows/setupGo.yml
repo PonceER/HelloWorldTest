@@ -1,0 +1,23 @@
+name: Setup Go
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  
+
+jobs:
+ build:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Check out Code
+        uses: actions/checkout@v2
+      - name: Setup go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.13.7'
+      - name: Run version check
+        run: go version
+        
+      
