@@ -4,11 +4,13 @@ on:
   push:
     branches: [main]
   schedule:
-  - cron: '*****'
+    - cron: '*****'
+
 jobs:
-  name: My Job
-  runs-on: ubuntu-latest
-   steps:
-   - name: Print a greeting
-    run:
-      echo Hello there!!
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        run:
+          echo Hello there!!
